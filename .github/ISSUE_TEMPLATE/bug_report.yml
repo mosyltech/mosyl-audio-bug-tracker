@@ -1,0 +1,107 @@
+name: Bug Report
+description: Report a bug in a Mosyl Audio product
+title: "[BUG] "
+labels: ["bug"]
+body:
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Which application?
+      description: Select the Mosyl Audio product where the bug occurred.
+      options:
+        - "Sample Manager"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is the issue?
+      options:
+        - "Crash / App freeze"
+        - "Incorrect audio output"
+        - "Performance issue"
+        - "UI / visual glitch"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - "macOS"
+        - "Windows"
+        - "Linux"
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: OS Version
+      description: The specific version of your operating system.
+      placeholder: "e.g. macOS 15.3, Windows 11 24H2"
+    validations:
+      required: true
+
+  - type: input
+    id: product_version
+    attributes:
+      label: Plugin / App Version
+      description: Found in the plugin or app's About section.
+      placeholder: "e.g. 1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: daw
+    attributes:
+      label: DAW and Version
+      description: The digital audio workstation you were using, if applicable.
+      placeholder: "e.g. Ableton Live 12.1, Logic Pro 11.1, Pro Tools 2024.6"
+    validations:
+      required: false
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. The more specific, the better.
+      placeholder: "Describe what went wrong..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Walk us through exactly how to trigger the bug.
+      placeholder: |
+        1. Open the plugin in ...
+        2. Set parameter X to ...
+        3. Press play ...
+        4. The bug occurs
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expected to happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: >
+        Anything else that might help — screenshots, screen recordings, audio samples,
+        crash logs, or special session conditions (e.g. high buffer size, specific sample rate).
+    validations:
+      required: false
