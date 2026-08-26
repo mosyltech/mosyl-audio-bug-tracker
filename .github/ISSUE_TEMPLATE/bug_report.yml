@@ -10,7 +10,8 @@ body:
       label: Which application?
       description: Select the Mosyl Audio product where the bug occurred.
       options:
-        - "Sample Manager"
+        - "Sample Manager Free"
+        - "Sample Manager Pro"
     validations:
       required: true
 
